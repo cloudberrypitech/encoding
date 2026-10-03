@@ -5,7 +5,7 @@ description = ""
 authors = [
     {name = "CloudberryPiTech",email = "bubblesbakale1@outlook.com"}
 ]
-readme = "README.md"
+readme = "README.adoc"
 requires-python = ">=3.14"
 dependencies = [
 ]
