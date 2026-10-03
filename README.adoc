@@ -1,6 +1,7 @@
 = Encoding
 :toc:
 :sectnums: |,all|
+:stylesheet: styles.css
 :author: Cloudberry Pi Technologies
 :icons: font
 :basic-badges: https://img.shields.io/badge
@@ -8,9 +9,11 @@
 :nofooter:
 :nofootnotes:
 
+== Default Tags
 image::{basic-badges}/license-MIT-blue.svg[license]
 image::{basic-badges}/version-1.0.0-blue.svg[version]
 image::{basic-badges}/build-passing-brightgreen.svg[Build]
 image::{url}/contributors/cloudberrypitech/encoding[Github Contributors]
 image::{url}/stars/cloudberrypitech/encoding[Github Stars]
 image::{url}/watchers/cloudberrypitech/encoding[Github Watchers]
+image::{url}/forks/cloudberrypitech/encoding[Github Forks]

@@ -1,0 +1,15 @@
+body {
+  /* Starting color */
+  background-color: rgba(0, 0, 0, 0.712); 
+  color: #ffffff;
+  padding: 20px;
+  
+  /* The Transition: property | duration | easing curve */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* The state change that triggers the transition */
+body:hover {
+  background-color: white; /* Ending background color */
+  color: #000000;             /* Ending text color */
+}
