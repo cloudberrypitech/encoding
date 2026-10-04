@@ -1,7 +1,6 @@
 = Encoding
 :toc:
 :sectnums: |,all|
-:stylesheet: styles.css
 :author: Cloudberry Pi Technologies
 :icons: font
 :basic-badges: https://img.shields.io/badge
@@ -14,6 +13,13 @@ image::{basic-badges}/license-MIT-blue.svg[license]
 image::{basic-badges}/version-1.0.0-blue.svg[version]
 image::{basic-badges}/build-passing-brightgreen.svg[Build]
 image::{url}/contributors/cloudberrypitech/encoding[Github Contributors]
+image::{url}/issues/cloudberrypitech/encoding[Github Issues]
 image::{url}/stars/cloudberrypitech/encoding[Github Stars]
 image::{url}/watchers/cloudberrypitech/encoding[Github Watchers]
 image::{url}/forks/cloudberrypitech/encoding[Github Forks]
+
+== Documentation
+To see how to use encoding module, see xref:docs/USER-GUIDE.adoc[] or visit https://cloudberrypitech.github.io/encoding[our webpage].
+
+== Development Guide
+To learn how to develop this module, visit the xref:docs/DEVELOPMENT-GUIDE.adoc[development guide] for a better view of module/package development.
