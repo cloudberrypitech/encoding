@@ -1,4 +1,0 @@
-= Development Guide
-:toc:
-:title: Development Guide
-:stylesheet: styles.css
