@@ -5,4 +5,31 @@
 :sectnums: |,all|
 :nofooter:
 :nofootnotes:
-:stylesheet: styles.css
+:localtime:
+
+== Desktop Installation
+There are multiple methods to install the `Encodings` Module to your system. We have listed them in a tabular format below.
+
+|===
+|Installer |Compatible OS |Reliability |Installation Command
+
+|GitHub PIP install
+|Windows, Linux, and macOS
+|100% - Full Compatibility with all functions.
+|Run `pip install git+https://github.com/cloudberrypitech/encoding`
+
+|PIP Install
+|Windows, Linux, macOS
+|100% - Full Compatibility with all functions
+|Run `pip install encoding`
+
+|Homebrew
+|Linux and macOS
+|20% compatibility for Linux, 80% compatibility for macOS.
+|Run `brew tap cloudberrypitech/tap` then run `brew install encoding`.
+|===
+
+[NOTE]
+====
+If you are using macOS, use `pip3` instead of `pip`. Also note that Homebrew works only for macOS and Linux.
+====
