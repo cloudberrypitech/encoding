@@ -1,15 +1,13 @@
 = User Guide to Operations
-:toc: auto
-:authors: Cloudberry Pi Technologies
+:author: Cloudberry Pi Technologies
 :icons: font
-:sectnums: |,all|
+:toc: auto
+:sectnums:
+:sectnumlevels: 4
 :nofooter:
 :nofootnotes:
-:localtime:
-:iconfont-remote!:
-:stylesdir: .
-:iconfont-name: styles
-:title: Encoding Documentation
+:doctype: book
+:revdate: 2026-10-10
 
 == Desktop Installation
 There are multiple methods to install the `Encodings` Module to your system. We have listed them in a tabular format below.
