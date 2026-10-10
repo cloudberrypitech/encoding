@@ -6,6 +6,10 @@
 :nofooter:
 :nofootnotes:
 :localtime:
+:iconfont-remote!:
+:stylesdir: .
+:iconfont-name: styles
+:title: Encoding Documentation
 
 == Desktop Installation
 There are multiple methods to install the `Encodings` Module to your system. We have listed them in a tabular format below.
@@ -138,3 +142,8 @@ Listed requirements format is recommended for users who want it installable or o
 |Package management and dependency install
 |Poetry
 |===
+
+Installation of dependencies are given below
+
+=== Python Installation
+To install python on a Windows system, visit the https://www.python.org/downloads[python downloads page] for a list of all available python versions. Make sure you install a python version with a release more than 3.14. After completing the GUI setup installer click on confirm to complete final installation. Type `python` in your Windows terminal to ensure that python has been successfully installed on the system.
