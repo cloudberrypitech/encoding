@@ -23,7 +23,7 @@ There are multiple methods to install the `Encodings` Module to your system. We 
 |100% - Full Compatibility with all functions
 |Run `pip install encoding`. To install a specific release/version, type `pip install encoding==x.x.x`
 
-|Homebrew
+|Homebrew Tap
 |Linux and macOS
 |20% compatibility for Linux, 80% compatibility for macOS.
 |Run `brew tap cloudberrypitech/tap` then run `brew install encoding`.
@@ -32,6 +32,11 @@ There are multiple methods to install the `Encodings` Module to your system. We 
 |Windows, Linux and macOS
 |100% - For all operating systems
 |First Run `git clone https://github.com/cloudberrypitech/encoding` then run `pip install -e ./encoding`
+
+|Cloudbian Terminal Install
+|Cloudbian Lite Only
+|50% for all Cloudbian Operating Systems, 100% for Cloudbian Lite
+|Run `capt update` to update package list then run `capt install encoding`.
 |===
 
 [NOTE]
