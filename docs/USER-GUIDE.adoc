@@ -18,10 +18,11 @@ There are multiple methods to install the `Encodings` Module to your system. We 
 |100% - Full Compatibility with all functions.
 |Run `pip install git+https://github.com/cloudberrypitech/encoding`
 
-|PIP Install
-|Windows, Linux, macOS
-|100% - Full Compatibility with all functions
-|Run `pip install encoding`. To install a specific release/version, type `pip install encoding==x.x.x`
+
+|Poetry Install
+|Windows, Linux, and macOS
+|100% - full compatibility with all functions
+|Run `poetry add git+https://github.com/cloudberrypitech/encoding`
 
 |Homebrew Tap
 |Linux and macOS
@@ -31,7 +32,7 @@ There are multiple methods to install the `Encodings` Module to your system. We 
 |Git Clone
 |Windows, Linux and macOS
 |100% - For all operating systems
-|First Run `git clone https://github.com/cloudberrypitech/encoding` then run `pip install -e ./encoding`
+|First Run `git clone --depth 1 https://github.com/cloudberrypitech/encoding` then run `pip install -e ./encoding`
 
 |Cloudbian Terminal Install
 |Cloudbian Lite Only
@@ -42,6 +43,11 @@ There are multiple methods to install the `Encodings` Module to your system. We 
 |Windows, Linux and macOS
 |100% all operating systems
 |Run `docker pull encoding` then `docker run encoding`. For a specific command, type `docker run encoding <command>`.
+
+|Wget
+|Linux, macOS
+|100% for macOS and Linux. 0% for Windows
+|Run `curl -L -o download.zip https://api.github.com/repos/cloudberrypitech/encoding/zipball_url` then `unzip download.zip`.
 |===
 
 [NOTE]
@@ -95,4 +101,40 @@ Note that the package also comes with a command line interface.
 |Display all available commands along with their functions.
 |`--version`
 |Display the version of the current build.
+|===
+
+The commands for the encoding module can be updated to match community standards. The repository can be edited by the community for further enhancement of the main package. To develop commands, please read the xref:DEVELOPMENT-GUIDE.adoc[Development Guide].
+
+== Package requirements
+There are few requirements for the project to run in certain parameters. The content given below are listed in a list as well as a tabular format.
+Listed requirements format is recommended for users who want it installable or operable in all possible methods. Whereas the tabular format lists requirements for specific memory friendly installations.
+
+=== Listed Requirements Format
+. Python 3.14 and above
+. Homebrew
+. APT - For Linux
+. PIP
+. Git
+. Poetry
+. Docker / Podman
+. Wget
+
+=== Objective Focussed Installation Requirements
+|===
+|Objective |Requirement
+
+|Package for  Project development
+|Python 3.14 and PIP
+
+|Containerized Package
+|Docker / Podman
+
+|Root install and package manager installation
+|APT, and Homebrew
+
+|Download and Editing
+|Wget and Git
+
+|Package management and dependency install
+|Poetry
 |===
