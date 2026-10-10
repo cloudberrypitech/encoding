@@ -37,9 +37,62 @@ There are multiple methods to install the `Encodings` Module to your system. We 
 |Cloudbian Lite Only
 |50% for all Cloudbian Operating Systems, 100% for Cloudbian Lite
 |Run `capt update` to update package list then run `capt install encoding`.
+
+|Docker Container
+|Windows, Linux and macOS
+|100% all operating systems
+|Run `docker pull encoding` then `docker run encoding`. For a specific command, type `docker run encoding <command>`.
 |===
 
 [NOTE]
 ====
 If you are using macOS, use `pip3` instead of `pip`. Also note that Homebrew works only for macOS and Linux.
 ====
+
+The package is updated every 1 to 5 months but depends on the basis of the priority of the package.
+Note that the package also comes with a command line interface.
+
+== Command Documentation
+=== Python Functions
+|===
+|Command |Usage |Function
+
+|`encode`
+|`encoded_string = encoding.encode("foo.txt")`
+|Encode the text inside a file into bytes.
+
+|`decode_bytes`
+|`decoded_string = encoding.decode_bytes(encoded_string)`
+|Decode the encoded variable into a message again.
+
+|`encode_bytes`
+|`message = "hello world"; encoded_string = encoding.encode_bytes(message)`
+|Encode a variable into bytes format.
+
+|`decode`
+|`decoded_message = encoding.decode("foo.txt")`
+|Convert an encoded file into a decoded message again.
+|===
+
+=== Terminal CLI Functions
+|===
+|Command |Usage |Function
+
+|`encode`
+|`encoding encode <filename>`
+|Encode a file's content and store it in a new file.
+
+|`decode`
+|`encoding decode <filename>`
+|Decode a file's content and store it in a new file.
+|===
+
+=== Terminal Arguments
+|===
+|Argument |Function
+
+|`--help` or `-h`
+|Display all available commands along with their functions.
+|`--version`
+|Display the version of the current build.
+|===

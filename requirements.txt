@@ -8,7 +8,6 @@ cleo==2.1.0
 crashtest==0.4.1
 distlib==0.4.3
 dulwich==1.2.15
--e git+https://github.com/cloudberrypitech/encoding.git@26c96dcb473e98371eeeceddeea4e50828c5b156#egg=encoding
 fastjsonschema==2.22.2
 filelock==4.0.9
 findpython==0.8.0
