@@ -160,3 +160,7 @@ To install homebrew on a Linux's Ubuntu distribution, make sure you have the apt
 To install Homebrew on a Fedora/CentOS based system, first enter `dnf update` to update the dnf package list, then run `dnf install -y epel-release` to install required packages without confirmation. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to install homebrew.
 
 To install homebrew on Arch Linux, you would not have to update the package list, leading you to install requirements without any package list updates, to install requirements, run `pacman -S --noconfirm git` to install git without any confirmation message. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to install homebrew.
+
+To install homebrew on RHEL Linux first install the necessary packages using the `yum` package manager using the `yum install -y epel-release` command. Then install homebrew using curl by typing the command, `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash`
+
+Lastly, to install Homebrew on openSUSE Linux, install git on the system by using the `zipper` module, to install git, type `zypper install -f git`. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to download the main Homebrew installer script.
