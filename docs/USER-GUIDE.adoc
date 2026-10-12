@@ -114,7 +114,7 @@ Listed requirements format is recommended for users who want it installable or o
 === Listed Requirements Format
 . Python 3.14 and above
 . Homebrew
-. APT - For Linux
+. APT
 . PIP
 . Git
 . Poetry
@@ -150,7 +150,9 @@ To install python on a Windows system, visit the https://www.python.org/download
 // Installation on Linux and macOS
 Python is already have the latest python release preinstalled on Ubuntu as well as other linux distros. By default, the latest linux distros include support for python 3.14 and above. Operating systems such as macOS also have python baked inside the OS, eliminating installation for python. Yet for outdated operating systems run `sudo apt update && sudo apt full-upgrade python3` or `sudo apt update && sudo apt full-upgrade python3.14` to ensure that the required release is being installed. Yet you can install any other python version which has been released after 3.14. To check whether the latest python version has been installed, type `python3 --version` to determine the exact release version. For installation of the latest python release on macOS, you can use the https://brew.sh[Homebrew] command line package manager to easily upgrade to python 3.14. To install a specific python release, type `brew install python3.x` it is suggested python 3.14 exact to be installed. If you want to upgrade python to 3.14, type `brew upgrade python3.14`.
 
+[#foo]
 === Homebrew Installation
+:id: header1
 // Installation on macOS
 To install Homebrew on a macOS installed system, make sure you have Iterm 2 installed on your system. To begin, first type `~/.zshrc >> /etc/zshrc` to redirect the contents of `.zshrc` to `/etc/zshrc/`. This allows the changes to be applied to the system-wide zsh configuration. Then run `source ~/.zshrc` to apply the changes in the config file to the terminal. Then download Homebrew using `bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`. This runs the installer script in your terminal and downloads the necessary files into your system. Please note that the installation may ask for root password before download. To test whether brew has installed or not, type `brew --version` or `which brew` to locate the path of Homebrew. Please note that homebrew does not support Windows due to compatibility issues.
 
@@ -166,3 +168,6 @@ To install homebrew on Arch Linux, you would not have to update the package list
 To install homebrew on RHEL Linux first install the necessary packages using the `yum` package manager using the `yum install -y epel-release` command. Then install homebrew using curl by typing the command, `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash`
 
 Lastly, to install Homebrew on openSUSE Linux, install git on the system by using the `zipper` module, to install git, type `zypper install -f git`. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to download the main Homebrew installer script.
+
+=== Apt
+To install `apt` package manager on macOS, you would need <<foo,Homebrew>> installed on your system
