@@ -157,6 +157,8 @@ To install Homebrew on a macOS installed system, make sure you have Iterm 2 inst
 // Installation on Linux
 To install homebrew on a Linux's Ubuntu distribution, make sure you have the apt package list up to date by running `apt update`. Once updating the package list, run `apt install -y curl` to install curl for downloading homebrew. After installation of curl, enter `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` This command will install Homebrew on your Ubuntu distro.
 
+To install homebrew on Alpine Linux, you do not need to update the dependency list manually. To install git on alpine linux using the `apk` package manager, run `apk add --no-cache git`. Then run `wget https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh` to download the installer script. Then run `bash installer.sh` to specifically run the script.
+
 To install Homebrew on a Fedora/CentOS based system, first enter `dnf update` to update the dnf package list, then run `dnf install -y epel-release` to install required packages without confirmation. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to install homebrew.
 
 To install homebrew on Arch Linux, you would not have to update the package list, leading you to install requirements without any package list updates, to install requirements, run `pacman -S --noconfirm git` to install git without any confirmation message. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to install homebrew.
