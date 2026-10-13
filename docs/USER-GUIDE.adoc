@@ -150,24 +150,72 @@ To install python on a Windows system, visit the https://www.python.org/download
 // Installation on Linux and macOS
 Python is already have the latest python release preinstalled on Ubuntu as well as other linux distros. By default, the latest linux distros include support for python 3.14 and above. Operating systems such as macOS also have python baked inside the OS, eliminating installation for python. Yet for outdated operating systems run `sudo apt update && sudo apt full-upgrade python3` or `sudo apt update && sudo apt full-upgrade python3.14` to ensure that the required release is being installed. Yet you can install any other python version which has been released after 3.14. To check whether the latest python version has been installed, type `python3 --version` to determine the exact release version. For installation of the latest python release on macOS, you can use the https://brew.sh[Homebrew] command line package manager to easily upgrade to python 3.14. To install a specific python release, type `brew install python3.x` it is suggested python 3.14 exact to be installed. If you want to upgrade python to 3.14, type `brew upgrade python3.14`.
 
-[#foo]
+[#brew]
 === Homebrew Installation
 :id: header1
-// Installation on macOS
-To install Homebrew on a macOS installed system, make sure you have Iterm 2 installed on your system. To begin, first type `~/.zshrc >> /etc/zshrc` to redirect the contents of `.zshrc` to `/etc/zshrc/`. This allows the changes to be applied to the system-wide zsh configuration. Then run `source ~/.zshrc` to apply the changes in the config file to the terminal. Then download Homebrew using `bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`. This runs the installer script in your terminal and downloads the necessary files into your system. Please note that the installation may ask for root password before download. To test whether brew has installed or not, type `brew --version` or `which brew` to locate the path of Homebrew. Please note that homebrew does not support Windows due to compatibility issues.
 
-// Installation on Linux
-To install homebrew on a Linux's Ubuntu distribution, make sure you have the apt package list up to date by running `apt update`. Once updating the package list, run `apt install -y curl` to install curl for downloading homebrew. After installation of curl, enter `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` This command will install Homebrew on your Ubuntu distro.
+==== Installation on macOS
+To install Homebrew on macOS, open your terminal (such as Terminal.app or iTerm2) and run the official installation script directly. Do not modify system-wide shell configurations. Run the following command:
 
-To install homebrew on Alpine Linux, you do not need to update the dependency list manually. To install git on alpine linux using the `apk` package manager, run `apk add --no-cache git`. Then run `wget https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh` to download the installer script. Then run `bash installer.sh` to specifically run the script.
+[source,bash]
+----
+/bin/bash -c "\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+----
 
-To install Homebrew on a Fedora/CentOS based system, first enter `dnf update` to update the dnf package list, then run `dnf install -y epel-release` to install required packages without confirmation. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to install homebrew.
+During the process, the installer will prompt you for your Mac's user password and guide you through installing the Xcode Command Line Tools if they are missing. Once finished, follow the on-screen "Next steps" instructions to add `brew` to your `PATH`, then verify the installation by running `brew doctor` or `brew --version`.
 
-To install homebrew on Arch Linux, you would not have to update the package list, leading you to install requirements without any package list updates, to install requirements, run `pacman -S --noconfirm git` to install git without any confirmation message. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to install homebrew.
+==== Installation on Linux
+Homebrew (Linuxbrew) runs in a standalone directory, requires development tools (`gcc`, `make`, `git`), and **must not be run as the root user**. 
 
-To install homebrew on RHEL Linux first install the necessary packages using the `yum` package manager using the `yum install -y epel-release` command. Then install homebrew using curl by typing the command, `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash`
+First, install the required build dependencies based on your distribution:
 
-Lastly, to install Homebrew on openSUSE Linux, install git on the system by using the `zipper` module, to install git, type `zypper install -f git`. Then run `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash` to download the main Homebrew installer script.
+* *Ubuntu / Debian:*
++
+[source,bash]
+----
+sudo apt update && sudo apt install build-essential git curl -y
+----
 
-=== Apt
-To install `apt` package manager on macOS, you would need <<foo,Homebrew>> installed on your system
+* *Fedora / RHEL / CentOS / Rocky Linux:*
++
+[source,bash]
+----
+sudo dnf groupinstall "Development Tools" && sudo dnf install git curl -y
+----
+
+* *Arch Linux / Manjaro:*
++
+[source,bash]
+----
+sudo pacman -Syu --needed base-devel git curl
+----
+
+* *openSUSE:*
++
+[source,bash]
+----
+sudo zypper install -t pattern devel_basis && sudo zypper install git curl
+----
+
+Once the dependencies are installed, run the installer script as a **regular user**:
+
+[source,bash]
+----
+/bin/bash -c "\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+----
+
+==== Post-Installation (Required for Linux & Apple Silicon Mac)
+After the installation script completes, you **must** add Homebrew to your shell configuration so the system can find the `brew` command. Run the two commands printed in the terminal under "Next steps", which generally look like this:
+
+[source,bash]
+----
+echo 'eval "\$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+eval "\$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+----
+
+=== Installing Advanced Package Manager(apt)
+To install the `apt` package manager on macOS, you would need <<brew,Homebrew>> installed on your system. Then install the apt library from the homebrew core using `brew install apt`. Then verify the installation using `which apt` or simply `apt` in zshell terminal.
+
+The `apt` package module is already baked into some linux distributions. 2 popular distributions with `apt` pre-installed in the package itself is Ubuntu and Debian. If you want to update apt to the latest version, then run `sudo apt update && sudo apt upgrade apt`. This command will automatically updated apt package list, as well as install the latest release of the package manager.
+
+Installing apt on other 
