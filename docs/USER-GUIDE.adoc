@@ -218,4 +218,4 @@ To install the `apt` package manager on macOS, you would need <<brew,Homebrew>> 
 
 The `apt` package module is already baked into some linux distributions. 2 popular distributions with `apt` pre-installed in the package itself is Ubuntu and Debian. If you want to update apt to the latest version, then run `sudo apt update && sudo apt upgrade apt`. This command will automatically updated apt package list, as well as install the latest release of the package manager.
 
-Installing apt on other 
+Advanced Package Manager *would not be able to install compatible software and might install corrupted or system incompatible ones* on other Linux distributions. Make sure to use other package managers which are specifically optimised to function on that particular distro. Note that apt was designed to run only on Ubuntu and Fedora Linux systems.
