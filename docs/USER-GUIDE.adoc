@@ -115,7 +115,7 @@ Listed requirements format is recommended for users who want it installable or o
 . Python 3.14 and above
 . Homebrew
 . APT
-. PIP
+. PIP - Built in with Python
 . Git
 . Poetry
 . Docker / Podman
@@ -144,10 +144,8 @@ Listed requirements format is recommended for users who want it installable or o
 Installation of dependencies are given below
 
 === Python Installation
-// Installation on Windows
 To install python on a Windows system, visit the https://www.python.org/downloads[python downloads page] for a list of all available python versions. Make sure you install a python version with a release more than 3.14. After completing the GUI setup installer click on confirm to complete final installation. Type `python` in your Windows terminal to ensure that python has been successfully installed on the system.
 
-// Installation on Linux and macOS
 Python is already have the latest python release preinstalled on Ubuntu as well as other linux distros. By default, the latest linux distros include support for python 3.14 and above. Operating systems such as macOS also have python baked inside the OS, eliminating installation for python. Yet for outdated operating systems run `sudo apt update && sudo apt full-upgrade python3` or `sudo apt update && sudo apt full-upgrade python3.14` to ensure that the required release is being installed. Yet you can install any other python version which has been released after 3.14. To check whether the latest python version has been installed, type `python3 --version` to determine the exact release version. For installation of the latest python release on macOS, you can use the https://brew.sh[Homebrew] command line package manager to easily upgrade to python 3.14. To install a specific python release, type `brew install python3.x` it is suggested python 3.14 exact to be installed. If you want to upgrade python to 3.14, type `brew upgrade python3.14`.
 
 [#brew]
@@ -219,3 +217,109 @@ To install the `apt` package manager on macOS, you would need <<brew,Homebrew>> 
 The `apt` package module is already baked into some linux distributions. 2 popular distributions with `apt` pre-installed in the package itself is Ubuntu and Debian. If you want to update apt to the latest version, then run `sudo apt update && sudo apt upgrade apt`. This command will automatically updated apt package list, as well as install the latest release of the package manager.
 
 Advanced Package Manager *would not be able to install compatible software and might install corrupted or system incompatible ones* on other Linux distributions. Make sure to use other package managers which are specifically optimised to function on that particular distro. Note that apt was designed to run only on Ubuntu and Fedora Linux systems.
+
+=== Git Installation
+==== Installation on Windows
+Download the standalone installer from the official https://git-scm.com[Git for Windows website]. Run the `.exe` installer and follow the setup wizard. Ensure that the option **"Git from the command line and also from 3rd-party software"** is checked so that the executable is correctly mapped to your system `PATH`. Verify your installation in a new terminal window:
+[source,bash]
+----
+git --version
+----
+
+==== Installation on Linux & macOS
+For Linux distributions, Git can be retrieved natively through local package managers:
+
+* *Ubuntu / Debian:* `sudo apt update && sudo apt install git -y`
+* *Fedora / RHEL:* `sudo dnf install git -y`
+* *Arch Linux:* `sudo pacman -S --needed git`
+
+On macOS, Git is typically packaged within the Xcode Command Line Tools. If it is missing, you can install it using <<brew,Homebrew>>:
+[source,bash]
+----
+brew install git
+----
+
+=== Poetry Installation
+Poetry provides a custom installer script that works isolated from the rest of your system dependencies.
+
+==== Installation on Windows
+Open your PowerShell terminal and execute the following installation script:
+[source,powershell]
+----
+(Invoke-WebRequest -Uri https://python-poetry.org -UseBasicParsing).Content | py -
+----
+
+==== Installation on Linux & macOS
+Open your system terminal and execute the automated installer via `curl`:
+[source,bash]
+----
+curl -sSL https://python-poetry.org | python3 -
+----
+
+==== Post-Installation
+After the installation completes, ensure that the Poetry binary directory is appended to your shell configuration file (`~/.bashrc`, `~/.zshrc`, or Windows Environment Variables).
+* **Linux/macOS typical path:** `$HOME/.local/bin`
+* **Windows typical path:** `%USERPROFILE%\AppData\Roaming\Python\Scripts`
+
+Verify the installation path matches by executing:
+[source,bash]
+----
+poetry --version
+----
+
+=== Docker and Podman Installation
+==== Docker Desktop (Windows & macOS)
+For GUI-managed containers, download the installer matching your architecture from the official https://docker.com[Docker Desktop portal]. 
+* **Windows requirements:** Ensure WSL 2 (Windows Subsystem for Linux) is fully enabled and updated.
+* **macOS requirements:** Select either the Apple Silicon or Intel chip installer format depending on your processor hardware.
+
+==== Docker Engine (Linux)
+To install Docker Engine on a Linux system (e.g., Ubuntu), run the following automated utility script provided by Docker:
+[source,bash]
+----
+curl -fsSL https://docker.com -o get-docker.sh
+sudo sh get-docker.sh
+----
+Add your local user to the Docker usergroup to issue runtime commands without needing elevated root privileges:
+[source,bash]
+----
+sudo usermod -aG docker \$USER
+----
+
+==== Podman Alternative (All Systems)
+If you prefer a rootless, daemonless engine structure instead of Docker, install Podman:
+* **macOS:** `brew install podman` (followed by `podman machine init` and `podman machine start`)
+* **Windows:** `winget install RedHat.Podman`
+* **Ubuntu/Debian:** `sudo apt update && sudo apt install podman -y`
+
+=== Wget and Curl Utilities
+==== Installation on Windows
+Wget and Curl utilities come packaged inside native Windows powershell environments differently. `curl` is bundled natively within modern Windows 10/11 builds inside the command prompt environment. If you specifically need GNU `wget`, it is recommended to install it cleanly through the Windows Package Manager:
+[source,cmd]
+----
+winget install GNU.Wget
+----
+
+==== Installation on Linux & macOS
+Most distributions ship with these networking tools pre-bundled. If they are completely missing from your environmental build, deploy them using your specific OS package systems:
+
+* *Ubuntu / Debian:*
++
+[source,bash]
+----
+sudo apt update && sudo apt install wget curl -y
+----
+
+* *Fedora / RHEL:*
++
+[source,bash]
+----
+sudo dnf install wget curl -y
+----
+
+* *macOS (via Homebrew):*
++
+[source,bash]
+----
+brew install wget curl
+----
