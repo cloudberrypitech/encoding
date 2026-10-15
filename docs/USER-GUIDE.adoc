@@ -2,8 +2,7 @@
 :author: Cloudberry Pi Technologies
 :icons: font
 :toc: auto
-:sectnums:
-:sectnumlevels: 4
+:sectnums: |,all|
 :nofooter:
 :nofootnotes:
 :doctype: book
@@ -258,6 +257,7 @@ curl -sSL https://python-poetry.org | python3 -
 
 ==== Post-Installation
 After the installation completes, ensure that the Poetry binary directory is appended to your shell configuration file (`~/.bashrc`, `~/.zshrc`, or Windows Environment Variables).
+
 * **Linux/macOS typical path:** `$HOME/.local/bin`
 * **Windows typical path:** `%USERPROFILE%\AppData\Roaming\Python\Scripts`
 
@@ -270,6 +270,7 @@ poetry --version
 === Docker and Podman Installation
 ==== Docker Desktop (Windows & macOS)
 For GUI-managed containers, download the installer matching your architecture from the official https://docker.com[Docker Desktop portal]. 
+
 * **Windows requirements:** Ensure WSL 2 (Windows Subsystem for Linux) is fully enabled and updated.
 * **macOS requirements:** Select either the Apple Silicon or Intel chip installer format depending on your processor hardware.
 
@@ -288,6 +289,7 @@ sudo usermod -aG docker \$USER
 
 ==== Podman Alternative (All Systems)
 If you prefer a rootless, daemonless engine structure instead of Docker, install Podman:
+
 * **macOS:** `brew install podman` (followed by `podman machine init` and `podman machine start`)
 * **Windows:** `winget install RedHat.Podman`
 * **Ubuntu/Debian:** `sudo apt update && sudo apt install podman -y`
@@ -323,3 +325,13 @@ sudo dnf install wget curl -y
 ----
 brew install wget curl
 ----
+
+== Conclusion
+=== Project Summary
+In conclusion, the encoding module is for users who want to *encode text* and *not encrypt it*. To install the  python module enter `pip install git+https://github.com/cloudberyypitech/encoding` or `poetry add git+https://github.com/cloudberyypitech/encoding`.
+
+
+Lastly if you want to create and add a command to our module, please visit the xref:DEVELOPMENT-GUIDE.adoc[DEVELOPMENT GUIDE].
+
+=== That's It
+Thank you for visiting this repository on our GitHub. If you like this project please like and share the project to your friends/colleagues.
