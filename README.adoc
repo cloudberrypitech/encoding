@@ -20,3 +20,6 @@ image::{url}/forks/cloudberrypitech/encoding[Github Forks]
 
 == Documentation
 To see how to use encoding module, see the xref:docs/USER-GUIDE.adoc[User Guide] page of the project.
+
+
+To see how to develop your own commands and functions, look at the xref:docs/DEVELOPMENT-GUIDE.adoc[Development Guide].
