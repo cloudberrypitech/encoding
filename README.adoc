@@ -10,7 +10,7 @@
 
 == Default Tags
 image::{basic-badges}/license-MIT-blue.svg[license]
-image::{basic-badges}/version-1.0.0-blue.svg[version]
+image::https://img.shields.io/github/v/release/cloudberrypitech/encoding[{basic-badges}/v/cloudberrypitech/encoding[version\]]
 image::{basic-badges}/build-passing-brightgreen.svg[Build]
 image::{url}/contributors/cloudberrypitech/encoding[Github Contributors]
 image::{url}/issues/cloudberrypitech/encoding[Github Issues]
