@@ -1,0 +1,40 @@
+= Package Development Guide
+:title: Package Development Guide
+:app-name: Package Development Guide
+:authors: Cloudberry Pi Technologies
+:icons: font
+:toc:
+:nofooter:
+:toclevels: 5
+
+== Introduction to packages
+If you have never written a python package before, please read this section for a better understanding on python packages.
+
+=== What are packages
+A package in Python is a collection of modules that are organized in a specific file format, allowing users to easily access and use its functions, classes, and commands.
+
+=== Items Applicable with Packages
+A python package has the ability to support
+
+. Classes
+. Functions
+. Variables
+. Modules, and
+. Scripts
+
+This can be used to create a specific command or function and acts as a base to building a package.
+
+=== Difference between Packages and Modules
+|===
+|Packages |Modules
+
+|Packages are a collection of modules.
+|Modules are indivisual files containing code.
+
+|They are top level directories and mostly contain an `__init__.py` file. *They can also contain sub-packages.*
+
+|They can be part of a package or can stand alone. They do not require an `__init__.py` file.
+|===
+
+=== Usecases of Packages
+A package can come into use for many reasons, one of them being the case that they simplify code. The author/publisher of a package can write down the main code used to make the module function, and the end user can use it in a single line function. The second function for packages are to allow community written codes to be reused by the end user.

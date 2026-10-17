@@ -2,6 +2,7 @@
 :author: Cloudberry Pi Technologies
 :icons: font
 :toc: auto
+:toclevels: 5
 :sectnums: |,all|
 :nofooter:
 :nofootnotes:
